@@ -1,0 +1,13 @@
+<h1><%= @platform.name %> <%= @platform.image %> </h1>
+
+   <p> <%= @platform.games %> </p>
+
+   <%# <a href="/platforms">Return to Profile</a> %>
+
+   <form action="/platforms/<%= @platform.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <% if @platform.user == current_user %>
+         <button type="submit">Delete Post</button>
+      <% end %>
+   </form>
+

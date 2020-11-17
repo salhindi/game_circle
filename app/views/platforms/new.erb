@@ -1,0 +1,9 @@
+<h1>Share the Platforms You Play On</h1>
+<p><%= @error %></p>
+<form action="/platforms" method="post">
+<label>Platform Name</label>
+<input type="text" name="name">
+<label>Games</label>
+<textarea name="games"></textarea>
+<button type="submit">Post!</button>
+</form>

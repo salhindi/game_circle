@@ -1,0 +1,13 @@
+<h1>Platforms</h1>
+    <a href="/platforms/new">Add A Platform </a>
+
+    <% @platforms.each do |platform| %>
+        <h2><a href="/platforms/<%= platform.id %>"><%= platform.name %></a> <img src=<%= platform.image %> alt="platform" width = "42"></h2>
+
+        <p><%= platform.games %> </p>
+
+        <% if platform.user && session[:user_id] == platform.user.id %>
+            <a href="/platforms/<%= platform.id %>/edit">Edit</a>
+        <% end %>
+    <% end %>
+
